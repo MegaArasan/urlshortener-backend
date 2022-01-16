@@ -206,7 +206,7 @@ router.route("/userdata").get(auth, async (req, res) => {
   if (!result) {
     res.status(404).send("Not Found");
   }
-  console.log(result);
+  // console.log(result);
   res.send(result);
 });
 export const userRouter = router;

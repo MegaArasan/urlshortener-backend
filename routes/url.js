@@ -18,7 +18,7 @@ const router = express.Router();
 // Creating URL
 router.route("/url").post(async (request, response) => {
   const { url, email, customUrl } = request.body;
-  console.log(url);
+  // console.log(url);
   const date = new Date();
   const createdAt = `${date.toLocaleDateString()},${date.toLocaleTimeString()}`;
   const lastUpdated = createdAt;
@@ -42,7 +42,7 @@ router.route("/url").post(async (request, response) => {
       }
     }
     const randomString = customUrl ? customUrl : urlGenereator();
-    console.log(url);
+    // console.log(url);
     const create = await createData({
       email: email,
       longUrl: url,
