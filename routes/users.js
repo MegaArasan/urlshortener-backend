@@ -54,7 +54,7 @@ router.route("/signup").post(async (req, res) => {
     },
   });
 
-  const link = `http://localhost:3000/activation/${token}`;
+  const link = `https://url-shor-tener.netlify.app/activation/${token}`;
   const mailoptions = {
     from: "userbase@gmail.com",
     to: email,
@@ -127,7 +127,7 @@ router.route("/forgotpassword").post(async (req, res) => {
     },
   });
 
-  const link = `http://localhost:3000/forgotpassword/verify/${token}`;
+  const link = `https://url-shor-tener.netlify.app/forgotpassword/verify/${token}`;
   const mailoptions = {
     from: "userbase@gmail.com",
     to: email,
