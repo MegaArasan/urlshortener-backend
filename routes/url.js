@@ -23,10 +23,6 @@ router.route("/url").post(async (request, response) => {
   const createdAt = `${date.toLocaleDateString()},${date.toLocaleTimeString()}`;
   const lastUpdated = createdAt;
 
-  // if (!validUrl.isUri(url)) {
-  //   return response.status(400).send({ Msg: "Not a Valid URL" });
-  // }
-
   const shortCheck = await findUrl({ shortUrl: url });
   if (shortCheck) {
     const { shortUrl } = await shortCheck;
