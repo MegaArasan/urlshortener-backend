@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 dotenv.config();
 app.use(bodyParser.json());
-export const Base_URL = "http://localhost:2000/";
+export const Base_URL = "https://url-shor-tener.herokuapp.com/";
 
 const MONGO_URL = process.env.MONGO_URL;
 const PORT = process.env.PORT;
