@@ -52,7 +52,11 @@ async function findUrl(url) {
 }
 
 async function findManyUrl(userData) {
-  return await client.db("urlshort").collection("urls").find(userData).toArray();
+  return await client
+    .db("urlshort")
+    .collection("urls")
+    .find(userData)
+    .toArray();
 }
 
 async function updateLog(urlData) {
